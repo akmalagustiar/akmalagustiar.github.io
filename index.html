@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Holla!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- POPUP INTRO -->
+  <div id="popup">
+    <div class="popup-content">
+      <h2>👋 Selamat Datang di Website Saya</h2>
+      <p>Tekan tombol di bawah untuk melanjutkan!</p>
+      <button id="goToPortfolio">Click Here!</button>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>"Ilmu itu kehidupan hati daripada kebutaan, sinar penglihatan daripada kezaliman dan tenaga badan daripada kelemahan."</h1>
+      <h2>- Imam Al-Ghazali</h2>
+
+    </div>
+  </section>
+
+  <!-- PROFILE SECTION -->
+  <section id="portfolio" class="profile">
+    <img src="foto-saya.jpeg" alt="Foto Akmal Agustiar" class="profile-img" />
+    <h2>Akmal Agustiar</h2>
+    <p>"I am a technology enthusiast and very interested in anything related to science."</p>
+  </section>
+
+  <!-- PROJECT BUTTON SECTION -->
+  <section class="project">
+    <a href="https://akmalagustiar.github.io/pelatihan-lilin/" class="btn-project">
+      🌿 PELATIHAN KURSUS LILIN AROMATHERAPY
+    </a>
+  </section>
+
+  <!-- SOCIAL MEDIA SECTION -->
+  <section class="socials">
+    <a href="https://instagram.com/akmalagustiar" target="_blank">Instagram</a>
+    <a href="https://www.linkedin.com/in/akmal-agustiar-4879341a4/" target="_blank">LinkedIn</a>
+    <a href="https://github.com/akmalagustiar" target="_blank">GitHub</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Akmal Agustiar. All rights reserved.</p>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    const popup = document.getElementById('popup');
+    const btn = document.getElementById('goToPortfolio');
+    const portfolioSection = document.getElementById('portfolio');
+
+    // Saat halaman baru dimuat, tampilkan popup
+    window.onload = function () {
+      popup.style.display = 'flex';
+    };
+
+    // Saat tombol ditekan, popup hilang + scroll ke portfolio
+    btn.onclick = function () {
+      popup.classList.add('fadeOut');
+      setTimeout(() => {
+        popup.style.display = 'none';
+        portfolioSection.scrollIntoView({ behavior: 'smooth' });
+      }, 800);
+    };
+  </script>
+</body>
+</html>
